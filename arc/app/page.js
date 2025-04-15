@@ -5,6 +5,8 @@ import TopMenu from "@/components/TopMenu"
 import HeroSection from "@/components/HeroSection"
 import AboutMe from "@/components/AboutMe"
 import BookDisplay from "@/components/BookDisplay"
+import ContactForm from "@/components/ContactForm"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <BookDisplay />
+      <ContactForm />
+      <Footer />
     </main>
   )
 }
