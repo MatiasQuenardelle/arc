@@ -18,6 +18,27 @@ export default function TopMenu() {
     setLangOpen(false) // Close language menu after selection
   }
 
+  const bookSlugs = [
+    "bailar-en-las-nubes",
+    "pelo-rio",
+    "bola-vermelha",
+    "flores-en-el-desierto",
+    "la-montana",
+    "arboles-en-el-camino",
+    "capulana",
+    "vou-la-buscar",
+    "la-voz-de-la-vida",
+    "a-caixa-de-zahara",
+    "my-grandma",
+    "folk-tale",
+    "un-canto",
+    "doce-pescadores",
+    "mae-sereia",
+    "da-minha-janela",
+    "wangari-maathai",
+    "wonders-of-egypt",
+  ]
+
   return (
     <nav className="bg-pink-400 text-white p-4 shadow-lg w-full">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8">
@@ -36,38 +57,26 @@ export default function TopMenu() {
           </Link>
 
           {/* Books Dropdown */}
-          <div className="relative">
-            <button
-              onMouseEnter={() => setBooksOpen(true)}
-              onMouseLeave={() => setBooksOpen(false)}
-              className="flex items-center hover:underline"
-            >
+          <div
+            className="relative"
+            onMouseEnter={() => setBooksOpen(true)}
+            onMouseLeave={() => setBooksOpen(false)}
+          >
+            <button className="flex items-center hover:underline">
               {t("books")} <ChevronDown className="ml-1 w-4 h-4" />
             </button>
+
             {booksOpen && (
-              <div
-                className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-md z-50"
-                onMouseEnter={() => setBooksOpen(true)}
-                onMouseLeave={() => setBooksOpen(false)}
-              >
-                <Link
-                  href="/books/book1"
-                  className="block px-4 py-2 hover:bg-pink-200"
-                >
-                  Book 1
-                </Link>
-                <Link
-                  href="/books/book2"
-                  className="block px-4 py-2 hover:bg-pink-200"
-                >
-                  Book 2
-                </Link>
-                <Link
-                  href="/books/book3"
-                  className="block px-4 py-2 hover:bg-pink-200"
-                >
-                  Book 3
-                </Link>
+              <div className="absolute left-0 top-full w-64 bg-white text-black shadow-lg rounded-md z-50">
+                {bookSlugs.map((slug) => (
+                  <Link
+                    key={slug}
+                    href={`/books/${slug}`}
+                    className="block px-4 py-2 hover:bg-pink-200"
+                  >
+                    {t(`bookTitles.${slug}`)}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
@@ -122,7 +131,7 @@ export default function TopMenu() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden mt-4 space-y-2 bg-pink-500 text-white p-4 rounded-md w-full">
+        <div className="md:hidden mt-4 space-y-2 bg-pink-500 text-white p-4 rounded-md w-full max-h-[calc(100vh-100px)] overflow-y-auto">
           <Link href="/about" className="block hover:underline">
             {t("about")}
           </Link>
@@ -137,15 +146,15 @@ export default function TopMenu() {
           </button>
           {booksOpen && (
             <div className="pl-4 space-y-1">
-              <Link href="/books/book1" className="block hover:bg-pink-500 p-1">
-                Book 1
-              </Link>
-              <Link href="/books/book2" className="block hover:bg-pink-500 p-1">
-                Book 2
-              </Link>
-              <Link href="/books/book3" className="block hover:bg-pink-500 p-1">
-                Book 3
-              </Link>
+              {bookSlugs.map((slug) => (
+                <Link
+                  key={slug}
+                  href={`/books/${slug}`}
+                  className="block hover:bg-pink-500 p-1"
+                >
+                  {t(`bookTitles.${slug}`)}
+                </Link>
+              ))}
             </div>
           )}
 
