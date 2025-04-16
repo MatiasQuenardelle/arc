@@ -33,5 +33,17 @@
     "books": "Libros",
     "about": "Sobre mí",
     "thankYou": "¡Gracias por tu visita!"
+  },
+
+  "contactForm": {
+    "title": "Contáctame",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Tu correo electrónico",
+    "messagePlaceholder": "Tu mensaje",
+    "captchaRequired": "Por favor, completa el captcha antes de enviar.",
+    "sending": "Enviando...",
+    "sendButton": "Enviar mensaje",
+    "success": "¡Mensaje enviado con éxito! 🎉",
+    "error": "No se pudo enviar el mensaje. Intenta de nuevo más tarde."
   }
 }

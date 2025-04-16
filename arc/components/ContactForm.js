@@ -2,8 +2,10 @@
 import { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
 import HCaptcha from "@hcaptcha/react-hcaptcha"
+import { useTranslation } from "react-i18next"
 
 export default function ContactForm() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [captchaToken, setCaptchaToken] = useState("")
   const [status, setStatus] = useState("")
@@ -17,7 +19,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!captchaToken) {
-      setStatus("Please complete the captcha before submitting.")
+      setStatus(t("contactForm.captchaRequired"))
       return
     }
 
@@ -25,24 +27,24 @@ export default function ContactForm() {
 
     emailjs
       .send(
-        "service_0ffake6", // ✅ Replace with your EmailJS service ID
-        "template_l2mjwy7", // ✅ Replace with your EmailJS template ID
+        "service_0ffake6",
+        "template_l2mjwy7",
         {
           from_name: formData.name,
           reply_to: formData.email,
           message: formData.message,
         },
-        "VM0gePEBgxX098yry" // ✅ Replace with your EmailJS public key
+        "VM0gePEBgxX098yry"
       )
       .then(() => {
-        setStatus("Message sent successfully! 🎉")
+        setStatus(t("contactForm.success"))
         setFormData({ name: "", email: "", message: "" })
         setCaptchaToken("")
         if (captchaRef.current) captchaRef.current.resetCaptcha()
       })
       .catch((error) => {
         console.error(error)
-        setStatus("Failed to send message. Try again later.")
+        setStatus(t("contactForm.error"))
       })
       .finally(() => setIsSubmitting(false))
   }
@@ -54,13 +56,13 @@ export default function ContactForm() {
     >
       <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl">
         <h2 className="text-3xl font-bold text-center text-rose-500 mb-6">
-          Contact Me
+          {t("contactForm.title")}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
             name="name"
-            placeholder="Your name"
+            placeholder={t("contactForm.namePlaceholder")}
             value={formData.name}
             onChange={handleChange}
             required
@@ -69,7 +71,7 @@ export default function ContactForm() {
           <input
             type="email"
             name="email"
-            placeholder="Your email"
+            placeholder={t("contactForm.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
             required
@@ -77,7 +79,7 @@ export default function ContactForm() {
           />
           <textarea
             name="message"
-            placeholder="Your message"
+            placeholder={t("contactForm.messagePlaceholder")}
             rows={5}
             value={formData.message}
             onChange={handleChange}
@@ -85,7 +87,6 @@ export default function ContactForm() {
             className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
 
-          {/* ✅ hCaptcha */}
           <HCaptcha
             sitekey="9302a1d4-affa-402a-814e-d1d228ba70ce"
             onVerify={(token) => setCaptchaToken(token)}
@@ -97,7 +98,9 @@ export default function ContactForm() {
             disabled={isSubmitting}
             className="w-full bg-rose-400 text-white font-bold py-3 px-4 rounded-lg hover:bg-rose-500 transition-colors"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting
+              ? t("contactForm.sending")
+              : t("contactForm.sendButton")}
           </button>
         </form>
         {status && (

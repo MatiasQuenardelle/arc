@@ -33,5 +33,16 @@
     "books": "Books",
     "about": "About Me",
     "thankYou": "Thank you for visiting!"
+  },
+  "contactForm": {
+    "title": "Contact Me",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "captchaRequired": "Please complete the captcha before submitting.",
+    "sending": "Sending...",
+    "sendButton": "Send Message",
+    "success": "Message sent successfully! 🎉",
+    "error": "Failed to send message. Try again later."
   }
 }
