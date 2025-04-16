@@ -48,7 +48,10 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-50 py-16 px-6">
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-50 py-16 px-6"
+    >
       <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl">
         <h2 className="text-3xl font-bold text-center text-rose-500 mb-6">
           Contact Me

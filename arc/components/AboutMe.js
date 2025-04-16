@@ -6,7 +6,10 @@ export default function AboutMe() {
   const { t } = useTranslation()
 
   return (
-    <section className="w-full bg-gradient-to-br from-yellow-100 via-pink-100 to-blue-100 py-12 px-4">
+    <section
+      id="about"
+      className="w-full bg-gradient-to-br from-yellow-100 via-pink-100 to-blue-100 py-12 px-4"
+    >
       <div className="max-w-9xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center">

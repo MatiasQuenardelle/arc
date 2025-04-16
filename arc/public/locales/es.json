@@ -26,5 +26,12 @@
     "da-minha-janela": "Desde Mi Ventana",
     "wangari-maathai": "Wangari Maathai",
     "wonders-of-egypt": "Maravillas de Egipto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "contact": "Contacto",
+    "books": "Libros",
+    "about": "Sobre mí",
+    "thankYou": "¡Gracias por tu visita!"
   }
 }
