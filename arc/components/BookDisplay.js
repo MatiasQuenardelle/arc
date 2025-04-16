@@ -1,54 +1,43 @@
 "use client"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import { useTranslation } from "react-i18next"
 
 const books = [
-  { title: "Bailar en las Nubes", image: "/images/Bailar-en-las-nubes.jpg" },
-  { title: "Pelo Rio", image: "/images/Pelo-Rio.jpg" },
-  { title: "Bola Vermelha", image: "/images/Bola-Vermelha-CAPA.jpg" },
+  { id: "bailar-en-las-nubes", image: "/images/Bailar-en-las-nubes.jpg" },
+  { id: "pelo-rio", image: "/images/Pelo-Rio.jpg" },
+  { id: "bola-vermelha", image: "/images/Bola-Vermelha-CAPA.jpg" },
   {
-    title: "Flores En El Desierto",
+    id: "flores-en-el-desierto",
     image: "/images/FLORES-EN-EL-DESIERTO-COVER.jpg",
   },
-  { title: "La Montaña", image: "/images/La-montaña-cover.jpg" },
+  { id: "la-montana", image: "/images/La-montaña-cover.jpg" },
   {
-    title: "Arboles en el Camino",
+    id: "arboles-en-el-camino",
     image: "/images/Arboles-en-el-camino-COver.jpg",
   },
-  { title: "Capulana", image: "/images/CAPULANA_CAPA.jpg" },
+  { id: "capulana", image: "/images/CAPULANA_CAPA.jpg" },
   {
-    title: "Vou La Buscar a Noite e Ja Volto",
+    id: "vou-la-buscar",
     image: "/images/Vou la buscar a noite e ja volto.jpg",
   },
-  {
-    title: "La Voz de la Vida",
-    image: "/images/Tapa-Lavoz-de-la-vida-COLOR.jpg",
-  },
-  {
-    title: "The A Caixa de Zahara",
-    image: "/images/A-caixa-de-Zahara---CAPA.jpg",
-  },
-  { title: "My Grandma", image: "/images/Yadooh-cover-NEW-pink.jpg" },
-  { title: "Folk Tale From The World", image: "/images/Chile-Portada.jpg" },
-  {
-    title: "Un Canto Per Gli Alberi",
-    image: "/images/un-canto-per-gli-alberi-(copertina).jpg",
-  },
-  { title: "Doce Pescadores", image: "/images/Doce pescadores.jpg" },
-  { title: "Mae Sereia", image: "/images/Mãe-Sereia_Portada.jpg" },
-  {
-    title: "The Da Minha Janela",
-    image: "/images/Da-minha-janela_Portada.jpg",
-  },
-  { title: "Wangari Maathai", image: "/images/Wangari-Maathai-Portada.jpg" },
-  { title: "Wonders of Egypt", image: "/images/Wonders-of-egypt.jpg" },
+  { id: "la-voz-de-la-vida", image: "/images/Tapa-Lavoz-de-la-vida-COLOR.jpg" },
+  { id: "a-caixa-de-zahara", image: "/images/A-caixa-de-Zahara---CAPA.jpg" },
+  { id: "my-grandma", image: "/images/Yadooh-cover-NEW-pink.jpg" },
+  { id: "folk-tale", image: "/images/Chile-Portada.jpg" },
+  { id: "un-canto", image: "/images/un-canto-per-gli-alberi-(copertina).jpg" },
+  { id: "doce-pescadores", image: "/images/Doce pescadores.jpg" },
+  { id: "mae-sereia", image: "/images/Mãe-Sereia_Portada.jpg" },
+  { id: "da-minha-janela", image: "/images/Da-minha-janela_Portada.jpg" },
+  { id: "wangari-maathai", image: "/images/Wangari-Maathai-Portada.jpg" },
+  { id: "wonders-of-egypt", image: "/images/Wonders-of-egypt.jpg" },
 ]
 
 export default function BookDisplay() {
+  const { t } = useTranslation()
   const router = useRouter()
 
-  const handleClick = (title) => {
-    const slug = title.toLowerCase().replace(/\s+/g, "-")
+  const handleClick = (slug) => {
     router.push(`/books/${slug}`)
   }
 
@@ -58,15 +47,15 @@ export default function BookDisplay() {
         {books.map((book, index) => (
           <div
             key={index}
-            onClick={() => handleClick(book.title)}
+            onClick={() => handleClick(book.id)}
             className="cursor-pointer group flex flex-col items-center rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
           >
             <div className="w-full bg-rose-400 text-white font-bold text-center py-2 rounded-t-lg">
-              {book.title}
+              {t(`bookTitles.${book.id}`)}
             </div>
             <Image
               src={book.image}
-              alt={book.title}
+              alt={t(`bookTitles.${book.id}`)}
               width={300}
               height={400}
               className="w-full h-80 object-cover rounded-b-lg"

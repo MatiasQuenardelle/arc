@@ -6,5 +6,25 @@
   "heroHeadline": "Que seus dias sejam cheios de amor, paz e alegria",
   "aboutAuthorTitle": "Sobre o Autor",
   "aboutParagraph1": "Vanina Starkoff nasceu na bela América Latina, na cidade de Buenos Aires (Argentina). Se formou em designer gráfico, mas depois sentiu que essa não era sua verdadeira paixão. Sempre seguindo o caminho do coração, descobriu a arte de ilustrar livros para crianças. A partir daquele momento, ficou mergulhando naquele mundo maravilhoso. No ano 2014 foi morar no belo Brasil, onde encontrou seu lugar no mundo ao lado do mar, os pássaros e as árvores.",
-  "aboutParagraph2": "Tem mais de 20 livros publicados em vários países: Brasil, Argentina, México, Canadá, Portugal, Espanha, França, Itália, Reino Unido, Coreia do Sul e Emirados Árabes. Seu primeiro livro \"Dançar nas nuvens\" foi finalista do III Prêmio Compostela Internacional de Álbuns Ilustrados na Espanha (2010). Seu segundo livro \"Bola Vermelha\" recebeu uma menção honrosa no concurso de livro álbum «A la orilla del viento» (2010) e seu terceiro livro \"Flores no deserto\" recebeu outra menção honrosa no concurso de livro álbum «Invenciones» (2011), ambos no México. As ilustrações do seu livro *Pelo rio* foram finalistas do Prêmio Jabuti na categoria Ilustração (2015), no Brasil. Foi selecionada duas vezes consecutivas (2018 e 2019) entre os finalistas do Concurso Golden Pinwheel Young Illustrator, em Xangai. O livro *Da minha janela* do qual participou como autora das ilustrações recebeu o prêmio Jabuti na categoria Livro Infantil em 2020, no Brasil."
+  "aboutParagraph2": "Tem mais de 20 livros publicados em vários países: Brasil, Argentina, México, Canadá, Portugal, Espanha, França, Itália, Reino Unido, Coreia do Sul e Emirados Árabes. Seu primeiro livro \"Dançar nas nuvens\" foi finalista do III Prêmio Compostela Internacional de Álbuns Ilustrados na Espanha (2010). Seu segundo livro \"Bola Vermelha\" recebeu uma menção honrosa no concurso de livro álbum «A la orilla del viento» (2010) e seu terceiro livro \"Flores no deserto\" recebeu outra menção honrosa no concurso de livro álbum «Invenciones» (2011), ambos no México. As ilustrações do seu livro *Pelo rio* foram finalistas do Prêmio Jabuti na categoria Ilustração (2015), no Brasil. Foi selecionada duas vezes consecutivas (2018 e 2019) entre os finalistas do Concurso Golden Pinwheel Young Illustrator, em Xangai. O livro *Da minha janela* do qual participou como autora das ilustrações recebeu o prêmio Jabuti na categoria Livro Infantil em 2020, no Brasil.",
+  "bookTitles": {
+    "bailar-en-las-nubes": "Dançar nas Nuvens",
+    "pelo-rio": "Pelo Rio",
+    "bola-vermelha": "Bola Vermelha",
+    "flores-en-el-desierto": "Flores no Deserto",
+    "la-montana": "A Montanha",
+    "arboles-en-el-camino": "Árvores no Caminho",
+    "capulana": "Capulana",
+    "vou-la-buscar": "Vou Buscar a Noite e Já Volto",
+    "la-voz-de-la-vida": "A Voz da Vida",
+    "a-caixa-de-zahara": "A Caixa de Zahara",
+    "my-grandma": "Minha Avó",
+    "folk-tale": "Contos Populares do Mundo",
+    "un-canto": "Um Canto para as Árvores",
+    "doce-pescadores": "Doze Pescadores",
+    "mae-sereia": "Mãe Sereia",
+    "da-minha-janela": "Da Minha Janela",
+    "wangari-maathai": "Wangari Maathai",
+    "wonders-of-egypt": "Maravilhas do Egito"
+  }
 }
