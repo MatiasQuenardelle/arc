@@ -41,9 +41,9 @@ export default function HeroSection() {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-15 flex justify-center items-center">
-          <h1 className="text-4xl md:text-3xl text-white font-bold text-center px-4">
+          {/* <h1 className="text-4xl md:text-3xl text-white font-bold text-center px-4">
             {t("heroHeadline")}
-          </h1>
+          </h1> */}
         </div>
       </div>
 

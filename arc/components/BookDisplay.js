@@ -50,9 +50,9 @@ export default function BookDisplay() {
             onClick={() => handleClick(book.id)}
             className="cursor-pointer group flex flex-col items-center rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
           >
-            <div className="w-full bg-rose-400 text-white font-bold text-center py-2 rounded-t-lg">
+            {/* <div className="w-full bg-rose-400 text-white font-bold text-center py-2 rounded-t-lg">
               {t(`bookTitles.${book.id}`)}
-            </div>
+            </div> */}
             <Image
               src={book.image}
               alt={t(`bookTitles.${book.id}`)}

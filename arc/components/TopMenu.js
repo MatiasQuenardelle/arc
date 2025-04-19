@@ -21,6 +21,18 @@ export default function TopMenu() {
   }
   const router = useRouter()
 
+  const handleScrollTo = (sectionId) => {
+    const isHome = window.location.pathname === "/"
+
+    if (isHome) {
+      const section = document.getElementById(sectionId)
+      section?.scrollIntoView({ behavior: "smooth" })
+    } else {
+      // Append hash to scroll after navigation
+      router.push(`/#${sectionId}`)
+    }
+  }
+
   const bookSlugs = [
     "bailar-en-las-nubes",
     "pelo-rio",
@@ -53,20 +65,14 @@ export default function TopMenu() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
           <button
-            onClick={() => {
-              const section = document.getElementById("about")
-              section?.scrollIntoView({ behavior: "smooth" })
-            }}
+            onClick={() => handleScrollTo("about")}
             className="hover:underline"
           >
             {t("about")}
           </button>
 
           <button
-            onClick={() => {
-              const section = document.getElementById("contact")
-              section?.scrollIntoView({ behavior: "smooth" })
-            }}
+            onClick={() => handleScrollTo("contact")}
             className="hover:underline"
           >
             {t("contact")}
