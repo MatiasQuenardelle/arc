@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useRouter } from "next/navigation"
 import i18n from "@/lib/i18n"
+import Image from "next/image"
 
 export default function TopMenu() {
   const { t } = useTranslation()
@@ -58,12 +59,25 @@ export default function TopMenu() {
     <nav className="bg-pink-400 text-white p-4 shadow-lg w-full">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8">
         {/* Logo or Home Link */}
-        <Link href="/" className="text-xl font-bold uppercase mr-6">
-          {t("home")}
+        <Link href="/" className="mr-6">
+          <Image
+            src="/images/logo.jpg"
+            alt="Logo"
+            className="h-10 w-auto"
+            width={120}
+            height={40}
+          />
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
+          <Link
+            href="https://arcoirisdeamor3.lojavirtualnuvem.com.br/"
+            target="_blank"
+            className="hover:underline"
+          >
+            {t("store")}
+          </Link>
           <button
             onClick={() => handleScrollTo("about")}
             className="hover:underline"
@@ -154,6 +168,14 @@ export default function TopMenu() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden mt-4 space-y-2 bg-pink-500 text-white p-4 rounded-md w-full max-h-[calc(100vh-100px)] overflow-y-auto">
+          <Link
+            href="https://arcoirisdeamor3.lojavirtualnuvem.com.br/"
+            target="_blank"
+            className="block hover:underline"
+          >
+            {t("store")}
+          </Link>
+
           <button
             onClick={() => {
               const section = document.getElementById("about")

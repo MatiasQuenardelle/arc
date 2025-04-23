@@ -44,5 +44,6 @@
     "sendButton": "Enviar mensagem",
     "success": "Mensagem enviada com sucesso! 🎉",
     "error": "Falha ao enviar a mensagem. Tente novamente mais tarde."
-  }
+  },
+  "store": "Loja"
 }
