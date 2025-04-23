@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const images = [
-  "/images/slide1.jpg", // Replace with your actual image paths
-  "/images/slide2.jpg",
+  "/images/heroSection0.jpg", // Replace with your actual image paths
+  "/images/heroSection1.jpg",
   "/images/slide3.jpg",
 ]
 
