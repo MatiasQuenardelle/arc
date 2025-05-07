@@ -27,7 +27,7 @@ export default function ContactForm() {
 
     emailjs
       .send(
-        "service_0ffake6",
+        "service_trpfbx7",
         "template_l2mjwy7",
         {
           from_name: formData.name,
@@ -66,7 +66,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+            className="w-full text-black p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
           <input
             type="email"
@@ -75,7 +75,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+            className="w-full text-black p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
           <textarea
             name="message"
