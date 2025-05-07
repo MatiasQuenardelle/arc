@@ -84,7 +84,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+            className="w-full  text-black  p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
           />
 
           <HCaptcha
