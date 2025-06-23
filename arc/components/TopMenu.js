@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
-import { ChevronDown, Menu, X } from "lucide-react"
+import { ChevronDown, Menu, X, Instagram } from "lucide-react"
 import { useRouter } from "next/navigation"
 import i18n from "@/lib/i18n"
 import Image from "next/image"
@@ -71,25 +71,11 @@ export default function TopMenu() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link
-            href="https://arcoirisdeamor3.lojavirtualnuvem.com.br/"
-            target="_blank"
-            className="hover:underline"
-          >
-            {t("store")}
-          </Link>
           <button
             onClick={() => handleScrollTo("about")}
             className="hover:underline"
           >
             {t("about")}
-          </button>
-
-          <button
-            onClick={() => handleScrollTo("contact")}
-            className="hover:underline"
-          >
-            {t("contact")}
           </button>
 
           {/* Books Dropdown */}
@@ -116,6 +102,31 @@ export default function TopMenu() {
               </div>
             )}
           </div>
+
+          <Link
+            href="https://arcoirisdeamor3.lojavirtualnuvem.com.br/"
+            target="_blank"
+            className="hover:underline"
+          >
+            {t("store")}
+          </Link>
+
+          <button
+            onClick={() => handleScrollTo("contact")}
+            className="hover:underline"
+          >
+            {t("contact")}
+          </button>
+
+          {/* Instagram Link */}
+          <Link
+            href="https://www.instagram.com/arcoiiiirisdeamor/"
+            target="_blank"
+            className="hover:text-pink-200 transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-6 h-6" />
+          </Link>
 
           {/* Language Switcher Dropdown */}
           <div className="relative">
@@ -168,14 +179,6 @@ export default function TopMenu() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden mt-4 space-y-2 bg-pink-500 text-white p-4 rounded-md w-full max-h-[calc(100vh-100px)] overflow-y-auto">
-          <Link
-            href="https://arcoirisdeamor3.lojavirtualnuvem.com.br/"
-            target="_blank"
-            className="block hover:underline"
-          >
-            {t("store")}
-          </Link>
-
           <button
             onClick={() => {
               const section = document.getElementById("about")
@@ -184,16 +187,6 @@ export default function TopMenu() {
             className="hover:underline"
           >
             {t("about")}
-          </button>
-
-          <button
-            onClick={() => {
-              const section = document.getElementById("contact")
-              section?.scrollIntoView({ behavior: "smooth" })
-            }}
-            className="hover:underline"
-          >
-            {t("contact")}
           </button>
 
           <button
@@ -215,6 +208,35 @@ export default function TopMenu() {
               ))}
             </div>
           )}
+
+          <Link
+            href="https://arcoirisdeamor3.lojavirtualnuvem.com.br/"
+            target="_blank"
+            className="block hover:underline"
+          >
+            {t("store")}
+          </Link>
+
+          <button
+            onClick={() => {
+              const section = document.getElementById("contact")
+              section?.scrollIntoView({ behavior: "smooth" })
+            }}
+            className="hover:underline"
+          >
+            {t("contact")}
+          </button>
+
+          {/* Mobile Instagram Link */}
+          <Link
+            href="https://www.instagram.com/arcoiiiirisdeamor/"
+            target="_blank"
+            className="flex items-center space-x-2 hover:text-pink-200 transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5" />
+            <span>Instagram</span>
+          </Link>
 
           {/* Mobile Language Switcher */}
           <div className="relative">
