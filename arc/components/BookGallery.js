@@ -253,12 +253,38 @@ export default function BookGallery() {
 
   const translatedTitle = t(`bookTitles.${slug}`)
 
+  // Check if book details exist for this book
+  const hasBookDetails = t(`bookDetails.${slug}.publisher`, {
+    defaultValue: null,
+  })
+
   return (
     <section className="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-50 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-rose-500 mb-8">
           {translatedTitle}
         </h1>
+
+        {/* Book Details Section */}
+        {hasBookDetails && (
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-6 mb-8 mx-auto max-w-2xl">
+            <div className="text-center space-y-2">
+              <p className="text-lg font-medium text-purple-700 font-serif">
+                {t(`bookDetails.${slug}.publisher`)}
+              </p>
+              <p className="text-lg font-medium text-purple-700 font-serif italic">
+                {t(`bookDetails.${slug}.textAndIllustrations`)}
+              </p>
+              <p className="text-base text-gray-700 font-serif leading-relaxed">
+                {t(`bookDetails.${slug}.languages`)}
+              </p>
+              <p className="text-lg font-semibold text-rose-600 font-serif">
+                {t(`bookDetails.${slug}.location`)}
+              </p>
+            </div>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {book.images.map((img, i) => (
             <Image

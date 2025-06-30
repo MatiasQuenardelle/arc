@@ -27,6 +27,14 @@
     "wangari-maathai": "Wangari Maathai",
     "wonders-of-egypt": "Maravilhas do Egito"
   },
+  "bookDetails": {
+    "bailar-en-las-nubes": {
+      "publisher": "Editora: Kalandraka",
+      "textAndIllustrations": "Texto e ilustrações: Vanina Starkoff",
+      "languages": "Idiomas: Espanhol, Catalão, Galego, Basco, Italiano, Português, Inglês e Coreano.",
+      "location": "Espanha, 2010"
+    }
+  },
   "footer": {
     "rights": "Todos os direitos reservados.",
     "contact": "Contato",
