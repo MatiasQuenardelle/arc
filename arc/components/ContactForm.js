@@ -58,6 +58,9 @@ export default function ContactForm() {
         <h2 className="text-3xl font-bold text-center text-rose-500 mb-6">
           {t("contactForm.title")}
         </h2>
+        <p className="text-center text-gray-600 mb-8 text-lg">
+          vanina.starkoff@gmail.com
+        </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"

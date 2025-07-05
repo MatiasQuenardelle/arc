@@ -61,7 +61,7 @@ export default function TopMenu() {
         {/* Logo or Home Link */}
         <Link href="/" className="mr-6">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Logo"
             className="h-10 w-auto"
             width={120}

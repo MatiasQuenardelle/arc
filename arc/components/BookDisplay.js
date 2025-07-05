@@ -58,7 +58,7 @@ export default function BookDisplay() {
               alt={t(`bookTitles.${book.id}`)}
               width={300}
               height={400}
-              className="w-full h-80 object-cover rounded-b-lg"
+              className="w-full object-contain rounded-b-lg"
             />
           </div>
         ))}
