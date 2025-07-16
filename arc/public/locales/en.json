@@ -18,7 +18,7 @@
     "vou-la-buscar": "I'll Fetch the Night and Be Back",
     "la-voz-de-la-vida": "The Voice of Life",
     "a-caixa-de-zahara": "The Box of Zahara",
-    "my-grandma": "My Grandma",
+    "my-grandma": "Yadooh Mody",
     "folk-tale": "Folk Tale From the World",
     "un-canto": "A Song for the Trees",
     "doce-pescadores": "Twelve Fishermen",
@@ -33,6 +33,162 @@
       "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
       "languages": "Languages: Spanish, Catalan, Galician, Basque, Italian, Portuguese, English and Korean.",
       "location": "Spain, 2010"
+    },
+    "pelo-rio": {
+      "publisher": "Publisher: Pallas Míni",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2014"
+    },
+    "pelo-rio-2": {
+      "publisher": "Publisher: Groundwood Books",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: English",
+      "location": "Canada, 2017"
+    },
+    "pelo-rio-3": {
+      "publisher": "Publisher: Orfeu Negro",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Portugal, 2017"
+    },
+    "pelo-rio-4": {
+      "publisher": "Publisher: Rue du Monde",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: French",
+      "location": "France, 2017"
+    },
+    "bola-vermelha": {
+      "publisher": "Publisher: Pulo do Gato",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2015"
+    },
+    "bola-vermelha-2": {
+      "publisher": "Publisher: Orfeu Negro",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Portugal, 2021"
+    },
+    "flores-en-el-desierto": {
+      "publisher": "Publisher: Nostra Ediciones",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Spanish",
+      "location": "Mexico, 2014"
+    },
+    "flores-en-el-desierto-2": {
+      "publisher": "Publisher: Editora ZIT / Escrita Fina",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2025"
+    },
+    "la-montana": {
+      "publisher": "Publisher: Edelvives",
+      "textAndIllustrations": "Text: Liliana Cinetto",
+      "languages": "Language: Spanish",
+      "location": "Argentina, 2011"
+    },
+    "arboles-en-el-camino": {
+      "publisher": "Publisher: OQO",
+      "textAndIllustrations": "Text: Régine Raymond-García",
+      "languages": "Languages: Spanish, Galician, Portuguese, French and Polish",
+      "location": "Spain, 2012"
+    },
+    "capulana": {
+      "publisher": "Publisher: Scipione",
+      "textAndIllustrations": "Text: Mario Lemos - Heloisa Pires Lima",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2015"
+    },
+    "vou-la-buscar": {
+      "publisher": "Publisher: Berlendis",
+      "textAndIllustrations": "Text: Susana Ventura",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2014"
+    },
+    "la-voz-de-la-vida": {
+      "publisher": "Publisher: Rovelle",
+      "textAndIllustrations": "Text: Regine Raymond Garcia",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2015"
+    },
+    "a-caixa-de-zahara": {
+      "publisher": "Publisher: ZIT",
+      "textAndIllustrations": "Text: Adriana Morgado",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2016"
+    },
+    "my-grandma": {
+      "publisher": "Publisher: Kalimat",
+      "textAndIllustrations": "Text: Maitha Alkhayat",
+      "languages": "Language: Arabic",
+      "location": "United Arab Emirates, 2017"
+    },
+    "folk-tale": {
+      "publisher": "Publisher: KYO WON",
+      "textAndIllustrations": "Text: KYO WON",
+      "languages": "Language: Korean",
+      "location": "Korea, 2016"
+    },
+    "un-canto": {
+      "publisher": "Publisher: IL LEONE VERDE",
+      "textAndIllustrations": "Text and illustrations: Vanina Starkoff",
+      "languages": "Language: Italian",
+      "location": "Italy, 2017"
+    },
+    "doce-pescadores": {
+      "publisher": "Publisher: La Bohemia",
+      "textAndIllustrations": "Text: Franco Vaccarini, Illustrations: Vanina Starkoff",
+      "languages": "Language: Spanish",
+      "location": "Argentina, 2016"
+    },
+    "mae-sereia": {
+      "publisher": "Publisher: Pallas",
+      "textAndIllustrations": "Text: Teresa Cardenas, Illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2018"
+    },
+    "mae-sereia-2": {
+      "publisher": "Publisher: Thule",
+      "textAndIllustrations": "Text: Teresa Cardenas, Illustrations: Vanina Starkoff",
+      "languages": "Language: Spanish",
+      "location": "Spain, 2019"
+    },
+    "da-minha-janela": {
+      "publisher": "Publisher: Companhia das Letrinhas",
+      "textAndIllustrations": "Text: Otavio Junior, Illustrations: Vanina Starkoff",
+      "languages": "Language: Portuguese",
+      "location": "Brazil, 2018"
+    },
+    "da-minha-janela-2": {
+      "publisher": "Publisher: Barefoot Books",
+      "textAndIllustrations": "Text: Otavio Junior, Illustrations: Vanina Starkoff",
+      "languages": "Language: English",
+      "location": "United States, 2020"
+    },
+    "da-minha-janela-3": {
+      "publisher": "Publisher: World Library",
+      "textAndIllustrations": "Text: Otavio Junior, Illustrations: Vanina Starkoff",
+      "languages": "Language: Japanese",
+      "location": "Japan, 2023"
+    },
+    "wangari-maathai": {
+      "publisher": "Publisher: Akiara Books",
+      "textAndIllustrations": "Text: Speech by Wangari Maathai, Winner of the Nobel prize. Commentary by Laia de Ahumada, Illustrations: Vanina Starkoff",
+      "languages": "Language: Bilingual Edition",
+      "location": "Spain, 2020"
+    },
+    "wangari-maathai-2": {
+      "publisher": "Publisher: Groundwood Books",
+      "textAndIllustrations": "Text: Speech by Wangari Maathai, Winner of the Nobel prize. Commentary by Laia de Ahumada. Translation by Susan Ouriou, Illustrations: Vanina Starkoff",
+      "languages": "Language: English",
+      "location": "Canada, 2023"
+    },
+    "wonders-of-egypt": {
+      "publisher": "Publisher: Lonely Planet Kids",
+      "textAndIllustrations": "Text: Stewart Ross, Illustrations: Vanina Starkoff",
+      "languages": "Language: English",
+      "location": "2017"
     }
   },
   "footer": {

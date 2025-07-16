@@ -236,6 +236,16 @@ const books = {
   },
 }
 
+// Books with multiple editions
+const booksWithMultipleEditions = [
+  "pelo-rio",
+  "bola-vermelha", 
+  "flores-en-el-desierto",
+  "mae-sereia",
+  "da-minha-janela",
+  "wangari-maathai"
+]
+
 export default function BookGallery() {
   const { slug } = useParams()
   const { t } = useTranslation()
@@ -258,6 +268,60 @@ export default function BookGallery() {
     defaultValue: null,
   })
 
+  // Check if this book has multiple editions
+  const hasMultipleEditions = booksWithMultipleEditions.includes(slug)
+
+  // Get all editions for this book
+  const getEditions = () => {
+    const editions = []
+
+    
+    // Add main edition
+    if (hasBookDetails) {
+      editions.push({
+        key: slug,
+        publisher: t(`bookDetails.${slug}.publisher`),
+        textAndIllustrations: t(`bookDetails.${slug}.textAndIllustrations`),
+        languages: t(`bookDetails.${slug}.languages`),
+        location: t(`bookDetails.${slug}.location`)
+      })
+    }
+
+    // Add additional editions
+    if (hasMultipleEditions) {
+      for (let i = 2; i <= 4; i++) {
+        const editionKey = `${slug}-${i}`
+        const editionPublisher = t(`bookDetails.${editionKey}.publisher`, { defaultValue: null })
+        
+        if (editionPublisher && editionPublisher !== `bookDetails.${editionKey}.publisher`) {
+          const textAndIllustrations = t(`bookDetails.${editionKey}.textAndIllustrations`, { defaultValue: null })
+          const languages = t(`bookDetails.${editionKey}.languages`, { defaultValue: null })
+          const location = t(`bookDetails.${editionKey}.location`, { defaultValue: null })
+          
+          // Only add the edition if all required fields exist and are not the raw keys
+          if (textAndIllustrations && 
+              languages && 
+              location && 
+              textAndIllustrations !== `bookDetails.${editionKey}.textAndIllustrations` &&
+              languages !== `bookDetails.${editionKey}.languages` &&
+              location !== `bookDetails.${editionKey}.location`) {
+            editions.push({
+              key: editionKey,
+              publisher: editionPublisher,
+              textAndIllustrations: textAndIllustrations,
+              languages: languages,
+              location: location
+            })
+          }
+        }
+      }
+    }
+
+    return editions
+  }
+
+  const editions = getEditions()
+
   return (
     <section className="bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-50 py-12 px-4">
       <div className="max-w-5xl mx-auto">
@@ -266,22 +330,27 @@ export default function BookGallery() {
         </h1>
 
         {/* Book Details Section */}
-        {hasBookDetails && (
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-6 mb-8 mx-auto max-w-2xl">
-            <div className="text-center space-y-2">
-              <p className="text-lg font-medium text-purple-700 font-serif">
-                {t(`bookDetails.${slug}.publisher`)}
-              </p>
-              <p className="text-lg font-medium text-purple-700 font-serif italic">
-                {t(`bookDetails.${slug}.textAndIllustrations`)}
-              </p>
-              <p className="text-base text-gray-700 font-serif leading-relaxed">
-                {t(`bookDetails.${slug}.languages`)}
-              </p>
-              <p className="text-lg font-semibold text-rose-600 font-serif">
-                {t(`bookDetails.${slug}.location`)}
-              </p>
-            </div>
+        {editions.length > 0 && (
+          <div className="space-y-6 mb-8">
+            {editions.map((edition, index) => (
+              
+              <div key={edition.key} className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg p-6 mx-auto max-w-2xl">
+                <div className="text-center space-y-2">
+                  <p className="text-lg font-medium text-purple-700 font-serif">
+                    {edition.publisher}
+                  </p>
+                  <p className="text-lg font-medium text-purple-700 font-serif italic">
+                    {edition.textAndIllustrations}
+                  </p>
+                  <p className="text-base text-gray-700 font-serif leading-relaxed">
+                    {edition.languages}
+                  </p>
+                  <p className="text-lg font-semibold text-rose-600 font-serif">
+                    {edition.location}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         )}
 
