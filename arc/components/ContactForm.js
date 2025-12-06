@@ -25,14 +25,18 @@ export default function ContactForm() {
 
     setIsSubmitting(true)
 
+    // Format message to include sender's email address at the top
+    const formattedMessage = `From: ${formData.name} <${formData.email}>\n\n${formData.message}\n\n---\nReply to: ${formData.email}`
+
     emailjs
       .send(
         "service_trpfbx7",
         "template_l2mjwy7",
         {
           from_name: formData.name,
+          from_email: formData.email,
           reply_to: formData.email,
-          message: formData.message,
+          message: formattedMessage,
         },
         "VM0gePEBgxX098yry"
       )
