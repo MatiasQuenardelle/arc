@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "cd arc && npm run dev",
+    "build": "cd arc && npm run build",
+    "start": "cd arc && npm run start",
+    "lint": "cd arc && npm run lint"
   },
   "dependencies": {
     "react": "^19.0.0",
