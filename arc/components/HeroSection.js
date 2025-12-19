@@ -17,10 +17,10 @@ export default function HeroSection() {
   // Auto-slide every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      goToSlide((currentSlide + 1) % images.length)
+      setCurrentSlide((prev) => (prev + 1) % images.length)
     }, 5000)
     return () => clearInterval(interval)
-  }, [currentSlide])
+  }, [])
 
   const goToSlide = (newSlide) => {
     if (isTransitioning || newSlide === currentSlide) return
