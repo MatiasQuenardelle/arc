@@ -13,7 +13,7 @@
     "@hcaptcha/react-hcaptcha": "^1.12.0",
     "i18next": "^24.2.2",
     "lucide-react": "^0.477.0",
-    "next": "^15.5.7",
+    "next": "15.5.9",
     "next-i18next": "^15.4.2",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",
